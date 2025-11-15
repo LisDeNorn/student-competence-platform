@@ -653,6 +653,78 @@ body {
     border-radius: 8px;
 }
 
+/* ===== Главная страница (landing) ===== */
+
+.landing {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.landing-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.landing-subtitle {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #6b7280;
+}
+
+.landing-grid {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.landing-card {
+    width: 280px;
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    background: white;
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+}
+
+.landing-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.landing-card h3 {
+    margin-top: 12px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.landing-card p {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.landing-footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Иконки ролей — можно заменить позже */
+.landing-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+.landing-icon.student { background: #e0e7ff; }
+.landing-icon.applicant { background: #cffafe; }
+.landing-icon.hr { background: #dcfce7; }
 
 
 

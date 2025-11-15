@@ -2,19 +2,65 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Главная</title>
+    <title>Образовательная платформа</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <h1>Главная страница (index)</h1>
 
-    <nav>
-        <a href="profile.html">Профиль</a>
-        <a href="skills.html">Оценка навыков</a>
-        <a href="feedback.html">Обратная связь</a>
-        <a href="events.html">Мероприятия</a>
-    </nav>
+<header class="topbar">
+    <div class="container topbar-inner">
+        <div class="header-left">
+            <img class="partners-logo" src="img/partners.png" alt="">
+            <div class="header-text">
+                <div class="platform-title">Образовательная платформа</div>
+                <div class="platform-subtitle">Личный кабинет студента</div>
+            </div>
+        </div>
 
-    <script src="js/main.js"></script>
+        <div class="header-right">
+            <a href="#">К выбору роли</a>
+        </div>
+    </div>
+</header>
+
+<main class="landing container">
+
+    <div class="landing-logo">
+        <img class="partners-logo" src="img/partners.png" alt="">
+    </div>
+
+    <h1 class="landing-title">Образовательная платформа</h1>
+    <p class="landing-subtitle">Выберите роль для входа в систему</p>
+
+    <div class="landing-grid">
+
+        <a href="profile.html" class="landing-card">
+            <div class="landing-icon student"></div>
+            <h3>Студент</h3>
+            <p>Управление профилем, портфолио, навыками и получение обратной связи</p>
+        </a>
+
+        <a href="#" class="landing-card">
+            <div class="landing-icon applicant"></div>
+            <h3>Абитуриент</h3>
+            <p>Создание профиля, портфолио достижений и оценка навыков</p>
+        </a>
+
+        <a href="#" class="landing-card">
+            <div class="landing-icon hr"></div>
+            <h3>HR-специалист</h3>
+            <p>Просмотр студентов, анализ навыков и управление кандидатами</p>
+        </a>
+
+    </div>
+
+    <footer class="landing-footer">
+        © 2025 Образовательная платформа. Все права защищены.
+    </footer>
+
+</main>
+
 </body>
 </html>
+
