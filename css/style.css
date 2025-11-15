@@ -726,6 +726,91 @@ body {
 .landing-icon.applicant { background: #cffafe; }
 .landing-icon.hr { background: #dcfce7; }
 
+/* ----- Звёздочки ----- */
+.stars {
+    color: #007bff !important;
+}
 
+/* ----- Основные синие кнопки ----- */
+button.blue-btn,
+.btn.blue-btn,
+.event-card .blue-btn,
+.event-card button.blue-btn {
+    background: #007bff !important;
+    border: 1px solid #007bff !important;
+    color: #fff !important;
+    box-shadow: none !important;
+}
+
+button.blue-btn:hover,
+.btn.blue-btn:hover,
+.event-card .blue-btn:hover,
+.event-card button.blue-btn:hover {
+    background: #0069d9 !important;
+    border-color: #0069d9 !important;
+}
+
+/* ----- Серые кнопки ----- */
+button.gray-btn,
+.btn.gray-btn {
+    background: #f1f3f5 !important;
+    border: 1px solid #ced4da !important;
+    color: #212529 !important;
+}
+
+button.gray-btn:hover,
+.btn.gray-btn:hover {
+    background: #e4e8eb !important;
+}
+
+/* ----- Кнопки "Подробнее" / detail-btn ----- */
+.detail-btn {
+    border: 1px solid #ced4da !important;
+    background: #f8f9fa !important;
+    color: #007bff !important;
+}
+
+.detail-btn:hover {
+    background: #e9ecef !important;
+}
+
+/* ----- Вкладки (Soft / Hard) ----- */
+.tab.active {
+    background: #007bff !important;
+    border-color: #007bff !important;
+    color: #fff !important;
+}
+
+/* ----- Активный пункт навигации ----- */
+.nav-inner a.active {
+    background: #e7f1ff !important;
+    border: 1px solid #cfe2ff !important;
+    color: #007bff !important;
+}
+
+/* ----- Бейджи ----- */
+.badge-blue {
+    background: #e7f1ff !important;
+    color: #007bff !important;
+}
+
+.badge-gray {
+    background: #f1f3f5 !important;
+    color: #444 !important;
+}
+
+.badge-green {
+    background: #d3f9d8 !important;
+    color: #2f9e44 !important;
+}
+
+/* ----- Фокус на инпутах / селектах ----- */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none !important;
+    border-color: #007bff !important;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.25) !important;
+}
 
 
