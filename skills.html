@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Оценка навыков</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+    <div class="container topbar-inner">
+
+        <div class="header-left">
+            <img class="partners-logo" src="img/partners.png" alt="">
+            <div class="header-text">
+                <div class="platform-title">Образовательная платформа</div>
+                <div class="platform-subtitle">Личный кабинет студента</div>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <a href="#">К выбору роли</a>
+        </div>
+
+    </div>
+</header>
+
+<nav class="nav">
+    <div class="container nav-inner">
+        <a href="profile.html">Профиль</a>
+        <a href="portfolio.html">Портфолио</a>
+        <a class="active" href="skills.html">Оценка навыков</a>
+        <a href="feedback.html">Обратная связь</a>
+        <a href="events.html">Мероприятия</a>
+    </div>
+</nav>
+
+<main class="container main">
+
+    <!-- Вкладки -->
+    <div class="tabs">
+        <button class="tab active" id="softTab">Soft Skills</button>
+        <button class="tab" id="hardTab">Hard Skills</button>
+    </div>
+
+    <!-- КОНТЕЙНЕР Soft Skills -->
+    <div id="softSkillsBlock">
+
+        <div class="info-box">
+            Оценка по soft-skills формируется из оценки наставника
+        </div>
+
+        <div class="skills-grid">
+
+            <!-- Левая карта -->
+            <div class="card skill-card">
+                <h3>Результаты последней оценки</h3>
+                <p class="small-gray">от 01.06.2025</p>
+                <canvas id="radarChart"></canvas>
+            </div>
+
+            <!-- Правая карта -->
+            <div class="card skill-card">
+                <h3>График развития навыков</h3>
+                <p class="small-gray">Динамика развития за весь период обучения</p>
+
+                <label class="select-label">Навык</label>
+                <select id="skillSelect" class="skill-select">
+                    <option>Аналитическое мышление</option>
+                    <option>Коммуникация</option>
+                    <option>Лидерство</option>
+                    <option>Мотивация</option>
+                </select>
+
+                <canvas id="lineChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- КОНТЕЙНЕР Hard Skills -->
+    <div id="hardSkillsBlock" style="display:none;">
+
+        <button class="btn blue-btn test-btn">+ Пройти тест по hard-skills</button>
+
+        <div class="two-block-row">
+            <div class="card dropdown-card">
+                <div class="dropdown-header">
+                    <div>
+                        <div class="dropdown-title">Результаты последнего теста</div>
+                        <div class="small-gray">Пройден 01.11.2023</div>
+                    </div>
+                    <span class="arrow">▼</span>
+                </div>
+            </div>
+
+            <div class="card dropdown-card">
+                <div class="dropdown-header">
+                    <div>
+                        <div class="dropdown-title">График развития навыков</div>
+                        <div class="small-gray">Динамика развития за последний год</div>
+                    </div>
+                    <span class="arrow">▼</span>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="section-title">История тестов</h3>
+        <p class="small-gray">Все пройденные тестирования</p>
+
+        <!-- ТЕСТ 1 -->
+        <div class="history-test">
+            <div>
+                <div class="test-date">01.11.2023</div>
+                <div class="test-type">Soft Skills</div>
+            </div>
+            <span class="test-badge">Пройден</span>
+            <button class="btn detail-btn">Подробнее</button>
+        </div>
+
+        <!-- ТЕСТ 2 -->
+        <div class="history-test">
+            <div>
+                <div class="test-date">05.11.2023</div>
+                <div class="test-type">Hard Skills</div>
+            </div>
+            <span class="test-badge">Пройден</span>
+            <button class="btn detail-btn">Подробнее</button>
+        </div>
+
+        <!-- ТЕСТ 3 -->
+        <div class="history-test">
+            <div>
+                <div class="test-date">01.09.2023</div>
+                <div class="test-type">Soft Skills</div>
+            </div>
+            <span class="test-badge">Пройден</span>
+            <button class="btn detail-btn">Подробнее</button>
+        </div>
+
+    </div>
+
+</main>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

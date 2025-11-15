@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль студента</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="container topbar-inner">
+
+        <div class="header-left">
+            <img class="partners-logo" src="img/partners.png" alt="">
+            <div class="header-text">
+                <div class="platform-title">Образовательная платформа</div>
+                <div class="platform-subtitle">Личный кабинет студента</div>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <a href="#">К выбору роли</a>
+        </div>
+
+    </div>
+</header>
+
+<nav class="nav">
+    <div class="container nav-inner">
+        <a class="active" href="profile.html">Профиль</a>
+        <a href="portfolio.html">Портфолио</a>
+        <a href="skills.html">Оценка навыков</a>
+        <a href="feedback.html">Обратная связь</a>
+        <a href="events.html">Мероприятия</a>
+    </div>
+</nav>
+
+<main class="container main">
+
+    <div class="header-row">
+        <h1>Профиль студента</h1>
+
+        <div class="actions">
+            <button class="btn">Сформировать резюме</button>
+            <button class="btn">Скачать резюме (PDF)</button>
+        </div>
+    </div>
+
+    <!-- Основной блок: фото + данные + О себе -->
+    <section class="grid-2">
+        <div class="card profile-card">
+            <div class="profile-info">
+                <img class="avatar" src="https://dummyimage.com/120x120/cccccc/000000&text=Photo" alt="">
+                <div>
+                    <h2>Петров Иван Сергеевич</h2>
+                    <p>Дата рождения: 15.05.2002</p>
+                    <p>Курс: 2</p>
+                    <p>Группа: 3743801/43001</p>
+                    <p>Программа: Экономика ИТ и Бизнес-анализ</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card about-card">
+            <div class="card-header">
+                <h3>О себе</h3>
+                <button class="edit-btn gray-btn">Редактировать</button>
+            </div>
+            <p>
+                Увлекаюсь анализом данных и машинным обучением. Активно участвую в хакатонах 
+                и научных конференциях. Стремлюсь развиваться в области бизнес-аналитики и 
+                product management.
+            </p>
+        </div>
+    </section>
+
+    <!-- Награды + Рейтинг -->
+    <section class="grid-2">
+        <div class="card">
+            <h3>Награды</h3>
+
+            <div class="award-item">
+                <div class="award-icon">🏅</div>
+                <div>
+                    <div class="award-title">ТОР-3 в блоке "Наука"</div>
+                    <div class="award-desc">За выдающиеся достижения в научной деятельности</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Рейтинг</h3>
+
+            <div class="rating-item">
+                <div class="rating-title">Позиция в рейтинге</div>
+                <div class="rating-desc">5 место из 15 студентов по направлению "Экономика ИТ и Бизнес-анализ"</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Образование + опыт -->
+    <section class="grid-2">
+        <div class="card">
+            <div class="card-header">
+                <h3>Образование</h3>
+                <button class="add-btn gray-btn" id="openEducation">+ Добавить</button>
+            </div>
+
+            <div class="edu-item">
+                <div class="edu-title">Лицей №1</div>
+                <div class="edu-desc">Математический профиль</div>
+                <div class="edu-year">Год окончания: 2020</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Опыт работы</h3>
+                <button class="add-btn gray-btn" id="openExperience">+ Добавить</button>
+            </div>
+
+            <div class="job-item">
+                <div class="job-title">ООО “ТехСтарт”</div>
+                <div class="job-role">Стажер-аналитик</div>
+                <div class="job-time">Июнь 2023 – Август 2023</div>
+                <div class="job-desc">
+                    Анализ пользовательских данных, подготовка отчетов для руководства, 
+                    работа с SQL и Python.
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ===== Модалка: Образование ===== -->
+<div class="modal" id="modalEducation">
+    <div class="modal-content">
+        <h2 class="modal-title">Добавить образование</h2>
+
+        <label class="modal-label">Учебное заведение</label>
+        <input type="text" class="modal-input" placeholder="Название университета">
+
+        <label class="modal-label">Уровень образования</label>
+        <select class="modal-input">
+            <option>Выберите уровень</option>
+            <option>Бакалавриат</option>
+            <option>Магистратура</option>
+            <option>Специалитет</option>
+        </select>
+
+        <label class="modal-label">Специальность</label>
+        <input type="text" class="modal-input" placeholder="Направление подготовки">
+
+        <label class="modal-label">Год окончания</label>
+        <input type="text" class="modal-input" placeholder="2020">
+
+        <div class="modal-buttons">
+            <button class="btn gray-btn modal-close">Отмена</button>
+            <button class="btn blue-btn">Сохранить</button>
+        </div>
+    </div>
+</div>
+
+<!-- ===== Модалка: Опыт ===== -->
+<div class="modal" id="modalExperience">
+    <div class="modal-content">
+        <h2 class="modal-title">Добавить опыт работы</h2>
+
+        <label class="modal-label">Компания</label>
+        <input type="text" class="modal-input" placeholder="Название компании">
+
+        <label class="modal-label">Должность</label>
+        <input type="text" class="modal-input" placeholder="Ваша должность">
+
+        <label class="modal-label">Период</label>
+        <input type="text" class="modal-input" placeholder="Июнь 2023 – Август 2023">
+
+        <label class="modal-label">Описание</label>
+        <textarea class="modal-input" placeholder="Краткое описание обязанностей"></textarea>
+
+        <div class="modal-buttons">
+            <button class="btn gray-btn modal-close">Отмена</button>
+            <button class="btn blue-btn">Сохранить</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,659 @@
+body {
+    font-family: sans-serif;
+    background: #f9fafb;
+    margin: 0;
+    color: #1a1a1a;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Верхняя панель */
+.topbar {
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 10px 0;
+}
+
+.topbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Навигация */
+.nav {
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-inner {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.nav-inner a {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: #4b5563;
+}
+
+.nav-inner a.active {
+    background: #e0f0ff;
+    color: #1e70c9;
+}
+
+/* Основной контент */
+.main {
+    padding: 30px 0;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background: #f0f4f8;
+    border: 1px solid #d0d7de;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile-info {
+    display: flex;
+    gap: 20px;
+}
+
+.avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-btn,
+.add-btn {
+    background: #f0f4f8;
+    border: 1px solid #d0d7de;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+/* Адаптив */
+@media (max-width: 900px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .header-row {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+}
+/* Фильтры */
+.filters {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0 30px;
+    flex-wrap: wrap;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.filter-select {
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+}
+
+/* Карточки мероприятий */
+.event-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.badge-gray { background: #f2f4f6; color: #444; }
+.badge-green { background: #d7f8d8; color: #1f7a1f; }
+.badge-blue { background: #e0f0ff; color: #1e70c9; }
+
+.event-meta {
+    margin: 8px 0 12px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.event-desc {
+    margin-bottom: 15px;
+}
+
+/* Кнопки */
+.blue-btn {
+    background: #1e70c9;
+    color: white;
+    border: none;
+}
+
+.gray-btn {
+    background: #e5e7eb;
+    border: none;
+}
+
+.btn-row {
+    display: flex;
+    gap: 10px;
+}
+
+/* Модалка */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active { display: flex; }
+
+.modal-content {
+    background: white;
+    width: 360px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.calendar-placeholder {
+    width: 100%;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+/* Подзаголовок */
+.subtitle {
+    margin-top: -10px;
+    color: #6b7280;
+}
+
+/* Блок общей оценки */
+.overall-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.overall-score {
+    background: #e0f0ff;
+    color: #1e70c9;
+    font-size: 28px;
+    font-weight: 700;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overall-title {
+    font-weight: 600;
+}
+
+.overall-level {
+    color: #38a169;
+    font-weight: 600;
+}
+
+/* Сетка критериев */
+.criteria-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 40px;
+}
+
+.criteria-card {
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.criteria-header {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.stars {
+    font-size: 18px;
+    color: #fbbf24;
+}
+
+.score {
+    font-weight: 600;
+    color: #4b5563;
+}
+
+/* История */
+.history-card {
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history-date {
+    background: #f3f4f6;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #374151;
+}
+
+.detail-btn {
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    padding: 8px 16px;
+}
+
+.small-gray {
+    color: #6b7280;
+}
+
+/* Адаптив */
+@media(max-width: 850px) {
+    .criteria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .overall-block {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* Вкладки */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background: #f9fafb;
+    cursor: pointer;
+}
+
+.tab.active {
+    background: #1e70c9;
+    color: #fff;
+    border-color: #1e70c9;
+}
+
+/* Инфоблок */
+.info-box {
+    background: #f1f5f9;
+    border: 1px solid #d1d5db;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Сетка */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.skill-card {
+    min-height: 420px;
+}
+
+/* Селектор */
+.skill-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    margin: 10px 0 20px;
+}
+
+/* Адаптив */
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Кнопка пройти тест */
+.test-btn {
+    margin-bottom: 20px;
+}
+
+/* Два свернутых блока */
+.two-block-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.dropdown-card {
+    padding: 0;
+}
+
+.dropdown-header {
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* История тестов */
+.history-test {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+}
+
+.test-date {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.test-type {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.test-badge {
+    background: #d1eaff;
+    color: #1e70c9;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.arrow {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .two-block-row {
+        grid-template-columns: 1fr;
+    }
+
+    .history-test {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+/* ===== МОДАЛКИ ===== */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(2px);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    width: 480px;
+    max-width: 90%;
+    background: #fff;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.modal-label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    margin-bottom: 14px;
+}
+
+.modal-select-wrapper {
+    position: relative;
+}
+
+.modal-select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    font-size: 15px;
+    margin-bottom: 14px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.gray-btn {
+    background: #f3f4f6;
+    color: #111;
+}
+/* ===== Шапка под макет ===== */
+
+/* Левый блок: лого + текст */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* расстояние между логотипом и текстом */
+}
+
+.partners-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.platform-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.platform-subtitle {
+    font-size: 12px;
+    color: #6b7280;
+    margin: 2px 0 0;
+}
+
+/* Вся шапка */
+.topbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+/* Портфолио */
+.stats-list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 15px;
+}
+
+.stats-item span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.blue-dot { background: #3b82f6; }
+.purple-dot { background: #a855f7; }
+.green-dot { background: #22c55e; }
+.orange-dot { background: #f97316; }
+.gray-dot { background: #6b7280; }
+
+.stats-total {
+    margin-top: 14px;
+    font-weight: 600;
+}
+
+/* Карточки достижений */
+.achievement-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.ach-left h3 {
+    margin: 0 0 4px;
+    font-size: 17px;
+}
+
+.ach-meta {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Цветные бейджи */
+.purple-badge  { background: #ede9fe; color: #6d28d9; }
+.gold-badge    { background: #fef3c7; color: #b45309; }
+.blue-badge    { background: #dbeafe; color: #1e40af; }
+.gray-badge    { background: #f3f4f6; color: #374151; }
+
+/* Кнопка "Добавить" справа */
+.portfolio-top-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.calendar-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+}
+
+
+
+
+
