@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Портфолио студента — HR</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="container topbar-inner">
+        <div class="header-left">
+            <img class="partners-logo" src="img/partners.png" alt="">
+            <div class="header-text">
+                <div class="platform-title">Цифровая платформа</div>
+                <div class="platform-subtitle">HR-специалист</div>
+            </div>
+        </div>
+        <div class="header-right">
+            <a href="index.html">К выбору роли</a>
+        </div>
+    </div>
+</header>
+
+<nav class="nav">
+    <div class="container nav-inner">
+        <a href="hr-rating.html">← Назад</a>
+        <a href="hr-profile.html">Профиль</a>
+        <a class="active" href="hr-portfolio.html">Портфолио</a>
+        <a href="hr-skills.html">Навыки</a>
+        <a href="hr-feedback.html">Обратная связь</a>
+    </div>
+</nav>
+
+<main class="container main">
+
+    <h1>Портфолио</h1>
+
+    <section class="grid-2">
+        <div class="card">
+            <h3>Распределение достижений</h3>
+            <canvas id="pieChart"></canvas>
+        </div>
+
+        <div class="card">
+            <h3>Статистика</h3>
+
+            <div class="stats-list">
+                <div class="stats-item"><span class="blue-dot"></span> Научные мероприятия: <b>8</b></div>
+                <div class="stats-item"><span class="purple-dot"></span> Хакатоны: <b>5</b></div>
+                <div class="stats-item"><span class="green-dot"></span> Волонтёрство: <b>3</b></div>
+                <div class="stats-item"><span class="orange-dot"></span> Олимпиады: <b>4</b></div>
+                <div class="stats-item"><span class="gray-dot"></span> Другие: <b>2</b></div>
+            </div>
+
+            <div class="stats-total">
+                Всего: <b>22</b>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="section-title">Последние достижения</h2>
+
+    <div class="card achievement-card">
+        <div class="ach-left">
+            <h3>Всероссийская конференция <span class="badge purple-badge">Докладчик</span></h3>
+            <div class="ach-meta">15.10.2024 — Очно</div>
+        </div>
+    </div>
+
+    <div class="card achievement-card">
+        <div class="ach-left">
+            <h3>ИТ-хакатон “Цифровой прорыв” <span class="badge gold-badge">Победитель</span></h3>
+            <div class="ach-meta">03.10.2024 — Онлайн</div>
+        </div>
+    </div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+const ctx = document.getElementById('pieChart');
+new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Наука','Хакатоны','Волонтёрство','Олимпиады','Другие'],
+        datasets: [{
+            data: [36, 23, 14, 18, 9],
+            backgroundColor: ['#3b82f6','#a855f7','#22c55e','#f97316','#6b7280']
+        }]
+    }
+});
+</script>
+
+</body>
+</html>

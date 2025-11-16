@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Оценка навыков — HR</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="container topbar-inner">
+        <div class="header-left">
+            <img class="partners-logo" src="img/partners.png" alt="">
+            <div class="header-text">
+                <div class="platform-title">Цифровая платформа</div>
+                <div class="platform-subtitle">HR-специалист</div>
+            </div>
+        </div>
+        <div class="header-right">
+            <a href="index.html">К выбору роли</a>
+        </div>
+    </div>
+</header>
+
+<nav class="nav">
+    <div class="container nav-inner">
+        <a href="hr-rating.html">← Назад</a>
+        <a href="hr-profile.html">Профиль</a>
+        <a href="hr-portfolio.html">Портфолио</a>
+        <a class="active" href="hr-skills.html">Навыки</a>
+        <a href="hr-feedback.html">Обратная связь</a>
+    </div>
+</nav>
+
+<main class="container main">
+
+    <h1>Оценка навыков</h1>
+
+    <div class="info-box">
+        Данные сформированы на основе оценок наставника и динамики участия.
+    </div>
+
+    <div class="skills-grid">
+
+        <div class="card skill-card">
+            <h3>Soft Skills</h3>
+            <p class="small-gray">Итоговый профиль навыков</p>
+            <canvas id="radarChart"></canvas>
+        </div>
+
+        <div class="card skill-card">
+            <h3>Динамика развития</h3>
+            <p class="small-gray">За время обучения</p>
+
+            <select class="skill-select">
+                <option>Аналитическое мышление</option>
+                <option>Коммуникация</option>
+                <option>Лидерство</option>
+                <option>Мотивация</option>
+            </select>
+
+            <canvas id="lineChart"></canvas>
+        </div>
+
+    </div>
+
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

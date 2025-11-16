@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Рейтинг студентов — HR</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        table.rating-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+        }
+
+        table.rating-table th {
+            text-align: left;
+            padding: 12px 10px;
+            color: #6b7280;
+            font-weight: 600;
+            border-bottom: 1px solid #e5e7eb;
+            background: #f9fafb;
+        }
+
+        table.rating-table td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .fio-link {
+            color: #007bff;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .fio-link:hover {
+            text-decoration: underline;
+        }
+
+        .fio-disabled {
+            color: #1a1a1a;
+            cursor: default;
+            text-decoration: none;
+        }
+
+        .resume-btn {
+            display: inline-block;
+            padding: 6px 10px;
+            border: 1px solid #007bff;
+            background: #e7f1ff;
+            border-radius: 6px;
+            cursor: pointer;
+            color: #007bff;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .resume-btn:hover {
+            background: #d8e8ff;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="container topbar-inner">
+        <div class="header-left">
+            <img class="partners-logo" src="img/partners.png" alt="">
+            <div class="header-text">
+                <div class="platform-title">Цифровая платформа</div>
+                <div class="platform-subtitle">HR-специалист</div>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <a href="index.html">К выбору роли</a>
+        </div>
+    </div>
+</header>
+
+<main class="container main">
+
+    <h1>Рейтинг студентов</h1>
+
+    <div class="filters">
+        <input class="search-input" type="text" placeholder="Поиск">
+
+        <select class="filter-select">
+            <option>Экономика ИТ и бизнес-анализ</option>
+        </select>
+
+        <select class="filter-select">
+            <option>Все курсы</option>
+            <option>1 курс</option>
+            <option>2 курс</option>
+            <option>3 курс</option>
+        </select>
+
+        <select class="filter-select">
+            <option>Все статусы</option>
+            <option>В резерве</option>
+            <option>Не в резерве</option>
+        </select>
+
+        <button class="btn blue-btn">Выгрузить список</button>
+    </div>
+
+    <div class="card">
+        <table class="rating-table">
+
+            <tr>
+                <th>Рейтинг</th>
+                <th>ФИО</th>
+                <th>Программа</th>
+                <th>Курс</th>
+                <th>Группа</th>
+                <th>Показатели</th>
+                <th>Резюме</th>
+            </tr>
+
+            <!-- 1 -->
+            <tr>
+                <td>1</td>
+                <td><span class="fio-disabled">Смирнов Алексей Дмитриевич</span></td>
+                <td>Экономика ИТ и бизнес-анализ</td>
+                <td>1</td>
+                <td>3743801/43001</td>
+                <td>📈 85% ⭐ 5.0 🏆 3</td>
+                <td><a class="resume-btn" href="#">Скачать</a></td>
+            </tr>
+
+            <!-- 2 — кликабельный студент -->
+            <tr>
+                <td>2</td>
+                <td><a class="fio-link" href="hr-profile.html">Петров Иван Сергеевич</a></td>
+                <td>Экономика ИТ и бизнес-анализ</td>
+                <td>1</td>
+                <td>3743801/43001</td>
+                <td>📈 75% ⭐ 5.0 🏆 3</td>
+                <td><a class="resume-btn" href="#">Скачать</a></td>
+            </tr>
+
+            <!-- 3 -->
+            <tr>
+                <td>3</td>
+                <td><span class="fio-disabled">Кузнецова Мария Андреевна</span></td>
+                <td>Экономика ИТ и бизнес-анализ</td>
+                <td>1</td>
+                <td>3743801/43001</td>
+                <td>📉 68% ⭐ 4.0 🏆 1</td>
+                <td><a class="resume-btn" href="#">Скачать</a></td>
+            </tr>
+
+            <!-- 4 -->
+            <tr>
+                <td>4</td>
+                <td><span class="fio-disabled">Воробьев Денис Максимович</span></td>
+                <td>Экономика ИТ и бизнес-анализ</td>
+                <td>2</td>
+                <td>3743801/43002</td>
+                <td>📈 64% ⭐ 4.2 🏆 2</td>
+                <td><a class="resume-btn" href="#">Скачать</a></td>
+            </tr>
+
+            <!-- 5 -->
+            <tr>
+                <td>5</td>
+                <td><span class="fio-disabled">Алексеева Виктория Дмитриевна</span></td>
+                <td>Экономика ИТ и бизнес-анализ</td>
+                <td>2</td>
+                <td>3743801/43002</td>
+                <td>📉 59% ⭐ 3.8 🏆 0</td>
+                <td><a class="resume-btn" href="#">Скачать</a></td>
+            </tr>
+
+            <!-- 6 -->
+            <tr>
+                <td>6</td>
+                <td><span class="fio-disabled">Орлов Андрей Сергеевич</span></td>
+                <td>Экономика ИТ и бизнес-анализ</td>
+                <td>3</td>
+                <td>3743801/43003</td>
+                <td>📈 58% ⭐ 4.1 🏆 1</td>
+                <td><a class="resume-btn" href="#">Скачать</a></td>
+            </tr>
+
+            <!-- 7 -->
+            <tr>
+                <td>7</td>
+                <td><span class="fio-disabled">Мельникова Дарья Павловна</span></td>
+                <td>Экономика ИТ и бизнес-анализ</td>
+                <td>1</td>
+                <td>3743801/43001</td>
+                <td>📉 53% ⭐ 3.5 🏆 1</td>
+                <td><a class="resume-btn" href="#">Скачать</a></td>
+            </tr>
+
+        </table>
+    </div>
+
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
